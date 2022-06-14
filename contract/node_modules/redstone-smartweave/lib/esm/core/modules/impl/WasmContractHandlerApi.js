@@ -1,0 +1,197 @@
+/* eslint-disable */
+import { deepCopy, LoggerFactory } from '../../..';
+import stringify from 'safe-stable-stringify';
+export class WasmContractHandlerApi {
+    constructor(swGlobal, contractDefinition, wasmExports) {
+        this.swGlobal = swGlobal;
+        this.contractDefinition = contractDefinition;
+        this.wasmExports = wasmExports;
+        this.logger = LoggerFactory.INST.create('WasmContractHandlerApi');
+        this.contractLogger = LoggerFactory.INST.create(swGlobal.contract.id);
+    }
+    async handle(executionContext, currentResult, interactionData) {
+        try {
+            const { interaction, interactionTx, currentTx } = interactionData;
+            this.swGlobal._activeTx = interactionTx;
+            this.swGlobal.caller = interaction.caller; // either contract tx id (for internal writes) or transaction.owner
+            // TODO: this should be rather set on the HandlerFactory level..
+            //  but currently no access evaluationOptions there
+            this.swGlobal.gasLimit = executionContext.evaluationOptions.gasLimit;
+            this.swGlobal.gasUsed = 0;
+            this.assignReadContractState(executionContext, currentTx, currentResult, interactionTx);
+            this.assignWrite(executionContext, currentTx);
+            const handlerResult = await this.doHandle(interaction);
+            return {
+                type: 'ok',
+                result: handlerResult,
+                state: this.doGetCurrentState(),
+                gasUsed: this.swGlobal.gasUsed
+            };
+        }
+        catch (e) {
+            // note: as exceptions handling in WASM is currently somewhat non-existent
+            // https://www.assemblyscript.org/status.html#exceptions
+            // and since we have to somehow differentiate different types of exceptions
+            // - each exception message has to have a proper prefix added.
+            // exceptions with prefix [RE:] ("Runtime Exceptions") should break the execution immediately
+            // - eg: [RE:OOG] - [RuntimeException: OutOfGas]
+            // exception with prefix [CE:] ("Contract Exceptions") should be logged, but should not break
+            // the state evaluation - as they are considered as contracts' business exception (eg. validation errors)
+            // - eg: [CE:ITT] - [ContractException: InvalidTokenTransfer]
+            const result = {
+                errorMessage: e.message,
+                state: currentResult.state,
+                result: null
+            };
+            if (e.message.startsWith('[RE:')) {
+                this.logger.fatal(e);
+                return {
+                    ...result,
+                    type: 'exception'
+                };
+            }
+            else {
+                return {
+                    ...result,
+                    type: 'error'
+                };
+            }
+        }
+    }
+    initState(state) {
+        switch (this.contractDefinition.srcWasmLang) {
+            case 'assemblyscript': {
+                const statePtr = this.wasmExports.__newString(stringify(state));
+                this.wasmExports.initState(statePtr);
+                break;
+            }
+            case 'rust': {
+                this.wasmExports.initState(state);
+                break;
+            }
+            case 'go': {
+                this.wasmExports.initState(stringify(state));
+                break;
+            }
+            default: {
+                throw new Error(`Support for ${this.contractDefinition.srcWasmLang} not implemented yet.`);
+            }
+        }
+    }
+    async doHandle(action) {
+        switch (this.contractDefinition.srcWasmLang) {
+            case 'assemblyscript': {
+                const actionPtr = this.wasmExports.__newString(stringify(action.input));
+                const resultPtr = this.wasmExports.handle(actionPtr);
+                const result = this.wasmExports.__getString(resultPtr);
+                return JSON.parse(result);
+            }
+            case 'rust': {
+                let handleResult = await this.wasmExports.handle(action.input);
+                if (!handleResult) {
+                    return;
+                }
+                if (Object.prototype.hasOwnProperty.call(handleResult, 'Ok')) {
+                    return handleResult.Ok;
+                }
+                else {
+                    this.logger.debug('Error from rust', handleResult.Err);
+                    let errorKey;
+                    let errorArgs = '';
+                    if (typeof handleResult.Err === 'string' || handleResult.Err instanceof String) {
+                        errorKey = handleResult.Err;
+                    }
+                    else {
+                        errorKey = Object.keys(handleResult.Err)[0];
+                        errorArgs = ' ' + handleResult.Err[errorKey];
+                    }
+                    if (errorKey == 'RuntimeError') {
+                        throw new Error(`[RE:RE]${errorArgs}`);
+                    }
+                    else {
+                        throw new Error(`[CE:${errorKey}${errorArgs}]`);
+                    }
+                }
+            }
+            case 'go': {
+                const result = await this.wasmExports.handle(stringify(action.input));
+                return JSON.parse(result);
+            }
+            default: {
+                throw new Error(`Support for ${this.contractDefinition.srcWasmLang} not implemented yet.`);
+            }
+        }
+    }
+    doGetCurrentState() {
+        switch (this.contractDefinition.srcWasmLang) {
+            case 'assemblyscript': {
+                const currentStatePtr = this.wasmExports.currentState();
+                return JSON.parse(this.wasmExports.__getString(currentStatePtr));
+            }
+            case 'rust': {
+                return this.wasmExports.currentState();
+            }
+            case 'go': {
+                const result = this.wasmExports.currentState();
+                return JSON.parse(result);
+            }
+            default: {
+                throw new Error(`Support for ${this.contractDefinition.srcWasmLang} not implemented yet.`);
+            }
+        }
+    }
+    // TODO: c/p...
+    assignReadContractState(executionContext, currentTx, currentResult, interactionTx) {
+        this.swGlobal.contracts.readContractState = async (contractTxId, height, returnValidity) => {
+            const requestedHeight = height || this.swGlobal.block.height;
+            this.logger.debug('swGlobal.readContractState call:', {
+                from: this.contractDefinition.txId,
+                to: contractTxId,
+                height: requestedHeight,
+                transaction: this.swGlobal.transaction.id
+            });
+            const { stateEvaluator } = executionContext.smartweave;
+            const childContract = executionContext.smartweave.contract(contractTxId, executionContext.contract, interactionTx);
+            await stateEvaluator.onContractCall(interactionTx, executionContext, currentResult);
+            const stateWithValidity = await childContract.readState(requestedHeight, [
+                ...(currentTx || []),
+                {
+                    contractTxId: this.contractDefinition.txId,
+                    interactionTxId: this.swGlobal.transaction.id
+                }
+            ]);
+            // TODO: it should be up to the client's code to decide which part of the result to use
+            // (by simply using destructuring operator)...
+            // but this (i.e. returning always stateWithValidity from here) would break backwards compatibility
+            // in current contract's source code..:/
+            return returnValidity ? deepCopy(stateWithValidity) : deepCopy(stateWithValidity.state);
+        };
+    }
+    assignWrite(executionContext, currentTx) {
+        this.swGlobal.contracts.write = async (contractTxId, input) => {
+            if (!executionContext.evaluationOptions.internalWrites) {
+                throw new Error("Internal writes feature switched off. Change EvaluationOptions.internalWrites flag to 'true'");
+            }
+            this.logger.debug('swGlobal.write call:', {
+                from: this.contractDefinition.txId,
+                to: contractTxId,
+                input
+            });
+            const calleeContract = executionContext.smartweave.contract(contractTxId, executionContext.contract, this.swGlobal._activeTx);
+            const result = await calleeContract.dryWriteFromTx(input, this.swGlobal._activeTx, [
+                ...(currentTx || []),
+                {
+                    contractTxId: this.contractDefinition.txId,
+                    interactionTxId: this.swGlobal.transaction.id
+                }
+            ]);
+            this.logger.debug('Cache result?:', !this.swGlobal._activeTx.dry);
+            await executionContext.smartweave.stateEvaluator.onInternalWriteStateUpdate(this.swGlobal._activeTx, contractTxId, {
+                state: result.state,
+                validity: {}
+            });
+            return result;
+        };
+    }
+}
+//# sourceMappingURL=WasmContractHandlerApi.js.map

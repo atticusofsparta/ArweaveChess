@@ -1,0 +1,111 @@
+import Arweave from 'arweave';
+import { LoggerFactory, R_GW_URL } from '..';
+import Transaction from 'arweave/node/lib/transaction';
+import { Buffer as isomorphicBuffer } from 'redstone-isomorphic';
+export class ArweaveWrapper {
+    constructor(arweave) {
+        this.arweave = arweave;
+        this.logger = LoggerFactory.INST.create('ArweaveWrapper');
+        this.baseUrl = `${arweave.api.config.protocol}://${arweave.api.config.host}:${arweave.api.config.port}`;
+        this.logger.debug('baseurl', this.baseUrl);
+    }
+    async rGwInfo() {
+        return await this.doFetchInfo(`${R_GW_URL}/gateway/arweave/info`);
+    }
+    async info() {
+        return await this.doFetchInfo(`${this.baseUrl}/info`);
+    }
+    async gql(query, variables) {
+        try {
+            const data = JSON.stringify({
+                query: query,
+                variables: variables
+            });
+            const response = await fetch(`${this.baseUrl}/graphql`, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                }
+            })
+                .then((res) => {
+                return res.ok ? res.json() : Promise.reject(res);
+            })
+                .catch((error) => {
+                var _a, _b;
+                if ((_a = error.body) === null || _a === void 0 ? void 0 : _a.message) {
+                    this.logger.error(error.body.message);
+                }
+                throw new Error(`Unable to retrieve gql page. ${error.status}: ${(_b = error.body) === null || _b === void 0 ? void 0 : _b.message}`);
+            });
+            return {
+                data: response,
+                status: 200
+            };
+        }
+        catch (e) {
+            this.logger.error('Error while loading gql', e);
+            throw e;
+        }
+    }
+    async tx(id) {
+        const response = await fetch(`${this.baseUrl}/tx/${id}`)
+            .then((res) => {
+            return res.ok ? res.json() : Promise.reject(res);
+        })
+            .catch((error) => {
+            var _a, _b;
+            if ((_a = error.body) === null || _a === void 0 ? void 0 : _a.message) {
+                this.logger.error(error.body.message);
+            }
+            throw new Error(`Unable to retrieve tx ${id}. ${error.status}. ${(_b = error.body) === null || _b === void 0 ? void 0 : _b.message}`);
+        });
+        return new Transaction({
+            ...response
+        });
+    }
+    async txData(id) {
+        // note: this is using arweave.net cache -
+        // not very safe and clever, but fast...
+        const response = await fetch(`${this.baseUrl}/${id}`);
+        if (!response.ok) {
+            this.logger.warn(`Unable to load data from arweave.net/${id} endpoint, falling back to arweave.js`);
+            // fallback to arweave-js as a last resort..
+            const txData = (await this.arweave.transactions.getData(id, {
+                decode: true
+            }));
+            return isomorphicBuffer.from(txData);
+        }
+        else {
+            const buffer = await response.arrayBuffer();
+            return isomorphicBuffer.from(buffer);
+        }
+    }
+    async txDataString(id) {
+        const buffer = await this.txData(id);
+        return Arweave.utils.bufferToString(buffer);
+    }
+    async doFetchInfo(url) {
+        try {
+            const response = await fetch(url)
+                .then((res) => {
+                return res.ok ? res.json() : Promise.reject(res);
+            })
+                .catch((error) => {
+                var _a, _b;
+                if ((_a = error.body) === null || _a === void 0 ? void 0 : _a.message) {
+                    this.logger.error(error.body.message);
+                }
+                throw new Error(`Unable to retrieve info. ${error.status}: ${(_b = error.body) === null || _b === void 0 ? void 0 : _b.message}`);
+            });
+            return response;
+        }
+        catch (e) {
+            this.logger.error('Error while loading network info', e);
+            throw e;
+        }
+    }
+}
+//# sourceMappingURL=ArweaveWrapper.js.map

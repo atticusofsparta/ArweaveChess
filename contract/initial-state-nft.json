@@ -1,0 +1,224 @@
+{
+    "name": "Arweave Chess NFTs",
+    "owner": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+    "assets": {
+        "membershipToken": {
+                "assets":{
+
+                    "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM":{
+                            "name": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+                            "avatar": "http://arweave.net/Pycn0zA_kwXeSdHP_uz9YF_ipA6D94GVt3-A8e0FgnI",
+                            "settings": {
+                                "board" : {"moveType": "Click-to-move", "style": {
+                                    "collection": "solidColorBoards",
+                                    "asset": "PurpleAndYellow"
+                                }},
+                                "pieces": {"P":"charlemagne","R":"charlemagne","N":"charlemagne","B":"charlemagne","Q":"charlemagne","K":"charlemagne"},
+                                "language" : "english",
+                                "username": "Atticus",
+                                "contact": "Discord: Arch_Druid#9751"
+                            },
+                            "level":"0",
+                            "score": {
+                                "wins":"33",
+                                "losses":"33",
+                                "stalemates":"69420",
+                                "totalGames":"70000"
+                            },
+                            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+                            "burnable": true
+                        }
+                },
+                "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+                "burnable": true
+            
+        },
+        "Pieces":{
+            "default":{
+                "assets":{
+                    "P": {"name": "Pawn Of Default","whiteImage":"url(http://arweave.net/XutDLZxmBW9mXkhOn_lZrN5W_M7QuSTlzIPKRpJlOJI)", "blackImage":"url(http://arweave.net/IDMVjyfKgtfyFSnLZLTGd6AGkw6UO1mZh8e4fRnCXLM)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "R": {"name": "Rook Of Default","whiteImage":"url(http://arweave.net/1VsKI95AGtUZS8vl6fZ22nC5VoY8Rpe3mykoeYl_c1I)", "blackImage":"url(http://arweave.net/gzg60_CB4UVfGDDXdk18M4frprP-ayk7KpipQyLzzk0)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "N": {"name": "Knight Of Default","whiteImage":"url(http://arweave.net/MCqMkSfJUgdSJPSCZYme0PFkBabpAEnbZdzmzFvzLgY)","blackImage":"url(http://arweave.net/PTGIM1MptgyJ8ca0tkVjQl6HuMejJ6Wy-kjS6jR2IUg)", "owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "B": {"name": "Bishop Of Default", "whiteImage":"url(http://arweave.net/XhZEeH4k8u4hb0hmOhPnanLsyy4SOUOsG9uROSBz6OE)","blackImage":"url(http://arweave.net/af9otmwYxMCBQbKYWGo2tH_LWmHfxiOtsQM17HZQIdM)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "Q": {"name": "Queen Of Default", "whiteImage":"url(http://arweave.net/KddKLLbHRG05qXc914cLs844S0Q2HLBfT19EtcFZAso)","blackImage":"url(http://arweave.net/njrAvLUoYiU8Is8iwyd2bIH5A9t70qPOYUU30IJl5GE)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "K": {"name": "King Of Default","whiteImage":"url(http://arweave.net/ax1HgvNJZPf7eaiU-FYvH4MOKSG44P8e559HSfg9Mnc)", "blackImage":"url(http://arweave.net/H1Y7I_JVd6Mgjh0l1o_-Vn-z7ZfnLdvcNoojEoSvt9Y)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}
+                }
+            },
+            "charlemagne":{
+            "assets":{  
+                        "P": {"name": "Pawn Of Charlemagne","whiteImage":"url(http://arweave.net/TuqvydepBYwvISnbY_iUvlr5wvL46Hz5-6hYaTbBU0I)", "blackImage":"url(http://arweave.net/pa9jzTPYvv8XeKaXbtRPbkba4mriuNhXtvgVcqu5SGw)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "R": {"name": "Rook Of Charlemagne","whiteImage":"url(http://arweave.net/7yTGXdupKZpb-SiPsE5O-2-dW4Yb8QZAEi5xMlj9-GA)", "blackImage":"url(http://arweave.net/tZ5ZlOBIbjH69bWPs8BzEVnTkNdTveY--B4Oy9trJfE)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "N": {"name": "Knight Of Charlemagne","whiteImage":"url(http://arweave.net/c7Ox95HeaX8G-nQSD6CHvCFQgI6dRXdiq57sOVOa9uY)","blackImage":"url(http://arweave.net/GkpiHNqnQUzmiIvj5oTDcx1Rd1LINypSu-9_koVNfho)", "owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "B": {"name": "Bishop Of Charlemagne", "whiteImage":"url(http://arweave.net/tN4TNwgtirlP9RLeTKcwycrTOLNj9HxXB2EP40HeaQ4)","blackImage":"url(http://arweave.net/T6CSv5s-g-UgU-NRe7u2wE6PWdOjjiGoqH7rvqL3nXs)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "Q": {"name": "Queen Of Charlemagne", "whiteImage":"url(http://arweave.net/qfrFnOHITjhDtCfECv_yIoLTTNiu1bQpla5786EV4a0)","blackImage":"url(http://arweave.net/0ydQzK5kaMeqnsvjbHu6YJDhOpadAfTzKS34ChI3Z8s)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                        "K": {"name": "King Of Charlemagne","whiteImage":"url(http://arweave.net/tXjv6cZktcGZNiHBomYSwUlb1mRC0G1_yIL0RbGJ6Rw)", "blackImage":"url(http://arweave.net/jMYVIpZho3t_ZkEoSj4ShILEzTxjBLgOznFnHCVs5Bc)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+        },
+        "staunton":{ 
+            "assets":{
+                "P": {"name": "Pawn Of Staunton","whiteImage":"url(http://arweave.net/pK3ltQ5Px2UJm4TlxCZEEdhC3KgTDkNkAKrTXLlKYZ4)", "blackImage":"url(http://arweave.net/esgVNUUugz5ARTmjWoOhZ3N3owUxxzTLKSyVecnAgGw)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "R": {"name": "Rook Of Staunton","whiteImage":"url(http://arweave.net/4e_6uZFhRRVXuz04o6aEf3DeaWP21RApHWIkYeYbu2A)", "blackImage":"url(http://arweave.net/UXefVjUPtQJxV54xFppnFh-3T4cHOnpM-VlAkqsl5gQ)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "N": {"name": "Knight Of Staunton","whiteImage":"url(http://arweave.net/fLh6g9Fm8JdhS2ldTeclqol_xQMLa4cA4E0tYl2drNI)","blackImage":"url(http://arweave.net/xFejWguAbIV8HAUB5xtohI3p0an0tBzOq33B6f8VbuA)", "owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "B": {"name": "Bishop Of Staunton", "whiteImage":"url(http://arweave.net/DCTI9BHhcChAfDYOFzOE_jj7dQJtjW1brDtLQMOn2rk)","blackImage":"url(http://arweave.net/Zj5YsZsv4TxmYBCrkoY_ugJAP-W74Zn6s0hz8zNac_s)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "Q": {"name": "Queen Of Staunton", "whiteImage": "url(http://arweave.net/WtUivuJ3XCn2LxeKLdzsGxs8VsOEoBM_-Z6--Rb_Ves)","blackImage":"url(http://arweave.net/dpizkEOpGcysFl9lBOquFtlCetGbaHBAtTcrBgiZgzQ)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "K": {"name": "King Of Staunton","whiteImage": "url(http://arweave.net/dDYwVdzqCsL4xTndrtMXxd9wL0n5xbkiS7rZ4x2pguc)", "blackImage":"url(http://arweave.net/u5F1Vc2A6C6_uCrQdSSgFbc0gAVgVY7SGn9uzejcZ1M)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+            },
+        "gustavSlenus":{
+            "assets":{
+                "P": {"name": "Pawn Of Gustav Slenus","whiteImage": "url(http://arweave.net/oF3Sn1FdifAFfn5eg6vwuv_3Sk3gx_Tlujq5eSlvtBk)", "blackImage":"url(http://arweave.net/z3gUwtPvD-nuRMcdGBrySq9u2tvzDyr1hzUYZCEKCI8)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "R": {"name": "Rook Of Gustav Slenus","whiteImage": "url(http://arweave.net/-EHfFGrHR3nXWQn-14qm4FSnxjdbFT3Ws8kHzXUfc3A)", "blackImage":"url(http://arweave.net/ZjkOCa3oI0bBKG3HTjgzhvT-iCBE-nabIqXN_J7zuYs)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "N": {"name": "Knight Of Gustav Slenus","whiteImage": "url(http://arweave.net/QNYdVTIwHsr4dBSOSEAp_jLuwcSQ5HyQ5t9P8qOZSro)","blackImage":"url(http://arweave.net/dkHCoauszNxxELM3ooBzRspCQwORRQS1CWFffwJnr2M)", "owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "B": {"name": "Bishop Of Gustav Slenus", "whiteImage": "url(http://arweave.net/s14ycHD1CwfaaF1DirR9fJqoodbA7_0QmefkfUG8hVk)","blackImage":"url(http://arweave.net/LcFRvLgtzuZZpWAfabRcZ3IRfkFHcOOiv8AKUgodFG8)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "Q": {"name": "Queen Of Gustav Slenus", "whiteImage": "url(http://arweave.net/rM-ikGPFFo6hTzCvwld3dP6qg9xXu8ttkHPgBoWIaTQ)","blackImage":"url(http://arweave.net/-x1Y8NUN9osuM5PwreI_F47_CTmZTvNRYCF5UrWXhPw)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "K": {"name": "King Of Gustav Slenus","whiteImage": "url(http://arweave.net/c1ETp_f-h7uAemYh5HgCAeeV_5wGwT2rSS1fnIXhXAA)", "blackImage":"url(http://arweave.net/Er-TLwXofcKHrxrqVfGd3OxtVMrtS9hxLET6i84TL8Q)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+        }},
+        "Boards": {
+            "solidColorBoards": {
+            "assets":{
+                "BlackAndWhite" : {"name":"Black And White","dark": "black", "light": "white","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PurpleAndYellow" : {"name":"Purple And Yellow","dark": "purple", "light": "yellow","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "BlueAndWhite" : {"name":"Blue And White","dark": "blue", "light": "white","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "BlackAndRed" : {"name":"Black And Red","dark": "black", "light": "red","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "BlackAndGreen" : {"name":"Black And Green","dark": "black", "light": "green","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PurpleAndOrange" : {"name":"Purple And Orange","dark": "purple", "light": "orange","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "GoldAndSilver" : {"name":"Gold And Silver","dark": "gold", "light": "silver","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "BlackAndBlue" : {"name":"Black And Blue","dark": "black", "light": "blue","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PurpleAndWhite" : {"name":"Purple And White","dark": "purple", "light": "white","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "BlueAndYellow" : {"name":"Blue And Yellow","dark": "blue", "light": "yellow","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "GreenAndWhite" : {"name":"Green And White","dark": "green", "light": "white","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PurpleAndRed" : {"name":"Purple And Red","dark": "purple", "light": "red","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+        },
+        "linearGradientBoards": {
+            "assets":{
+                "BlueWhiteAndTealBlack": {"name":"Blue/White And Teal/Black","dark": "linear-gradient(to bottom right, teal, black)", "light": "linear-gradient(to bottom, blue, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "YellowWhiteAndBlueBlack": {"name":"Yellow/White And Blue/Black","dark": "linear-gradient(to bottom right, blue, black", "light": "linear-gradient(to bottom, yellow, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "RedWhiteAndPurpleBlack": {"name":"Red/White And Purple/Black","dark": "linear-gradient(to bottom right, purple, black)", "light": "linear-gradient(to bottom, red, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "GreenWhiteAndGreenBlack":{"name":"Green/White And Green/Black","dark": "linear-gradient(to bottom right, green, black)", "light": "linear-gradient(to bottom, green, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PurpleWhiteAndGreenBlack": {"name":"Purple/White And Green/Black","dark": "linear-gradient(to bottom right, green, black)", "light": "linear-gradient(to bottom, purple, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "OrangeWhiteAndRedBlack": {"name":"Orange/White And Red/Black","dark": "linear-gradient(to bottom right, red, black)", "light": "linear-gradient(to bottom, orange, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "TealWhiteAndYellowBlack":{"name":"Teal/White And Yellow/Black","dark": "linear-gradient(to bottom right, yellow, black)", "light": "linear-gradient(to bottom, teal, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "SilverGreyAndGoldBlack":{"name":"Silver/Grey And Gold/Black","dark": "linear-gradient(to bottom right, gold, black)", "light": "linear-gradient(to bottom, silver, grey)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "GoldGoldYellowOrangeAndSilverBlack":{"name":"Gold/Gold/Yellow/Orange And Black","dark": "linear-gradient(to bottom, gold, gold, yellow, orange)", "light": "linear-gradient(to bottom right, silver, black)","owners":[], "burnable": false},
+                "GreyWhiteAndGreenBlack":{"name":"Grey/White And Green/Black","dark": "linear-gradient(to bottom right, green, black)", "light": "linear-gradient(to bottom, grey, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PinkWhiteAndPinkRedPurpleBlack":{"name":"Pink/White And Pink/Red/Purple/Black","dark": "linear-gradient(to bottom right, pink, red,purple,black)", "light": "linear-gradient(to bottom, pink, white)","owners":[], "burnable": false},
+                "CrimsonYellowAndGreenPurple":{"name":"Crimson/Yellow And Green/Purple","dark": "linear-gradient(to bottom right, green, purple)", "light": "linear-gradient(to bottom, crimson, yellow)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+            },
+        "radialGradientBoards": {
+            "assets":{
+                "SilverGreyWhiteAndGold#898703Black": {"name":"Silver/Grey/White And Gold/#898703/Black","dark": "radial-gradient( gold, #898703, black)", "light": "radial-gradient(silver, grey, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "TealSilverWhiteAndSilverGreenBlack": {"name":"Teal/Silver/White And Silver/Green/Black","dark": "radial-gradient(silver, green, black)", "light": "radial-gradient(teal, silver, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "BlueWhiteAndGreenBlack": {"name":"Blue/White And Green/Black","dark": "radial-gradient(green, black)", "light": "radial-gradient(blue, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+        },
+        "conicGradientBoards": {
+            "assets":{
+                "SilverGreyWhiteAndYellowGoldBlack":{"name":"Silver/Grey/White And Yellow/Gold/Black","dark": "conic-gradient(yellow ,gold, black)", "light": "conic-gradient(silver, grey, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PinkWhiteAndRedCrimsonBlack": {"name":"Pink/White And Red/Crimson/Black","dark": "conic-gradient(red, crimson, black)", "light": "conic-gradient(pink, white)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "CrimsonOrangeYellowOrangeCrimsonAndPurpleGreenPurpleBlackGreenPurpleGreen": {"name":"Crimson/Orange/Yellow/Orange/Crimson And Purple/Green/Purple/Black/Green/Purple/Green","dark": "conic-gradient(purple, green, purple,black, green, purple, green)", "light": "conic-gradient(crimson, orange, yellow, orange, crimson)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+
+        },
+        "standardWoodBoards": {
+            "assets":{
+                "BirdsEyeMapleAndEbony": {"name":"Birds Eye Maple And Ebony","dark": "url(http://arweave.net/UbTWVcuMiTLHSsigFTfKAwnuFn3919g-lwx_-YTH-tA)", "light": "url(http://arweave.net/75kbnkvOW9Kwsb7UHjKAgXaUeRLd-k-dbCmdzDoPNvU)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "OakAndEbony": {"name":"Oak And Ebony","dark": "url(http://arweave.net/UbTWVcuMiTLHSsigFTfKAwnuFn3919g-lwx_-YTH-tA)", "light": "url(http://arweave.net/7ROpwVy2WoNqLf_yC8H0z9J5WuOTd48hPfz__FFvFPY)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "OakAndSmokedOak": {"name":"Oak And Smoked Oak","dark": "url(http://arweave.net/YYI0B0D8VdlE2a7mGGDU4zZI8LYiAPb7mosWyiv90wA)", "light": "url(http://arweave.net/7ROpwVy2WoNqLf_yC8H0z9J5WuOTd48hPfz__FFvFPY)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "PlumAndSmokedOak": {"name":"Plum And Smoked Oak","dark": "url(http://arweave.net/YYI0B0D8VdlE2a7mGGDU4zZI8LYiAPb7mosWyiv90wA)", "light": "url(http://arweave.net/umAGsmYOH0-iEsD4av-ygPjPPav2HG7x3-xdtPE4lyo)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false},
+                "OliveAndWalnut": {"name":"Olive And Walnut","dark": "url(http://arweave.net/umAGsmYOH0-iEsD4av-ygPjPPav2HG7x3-xdtPE4lyo)", "light": "url(http://arweave.net/NrbA5Cd-7tYBYNQ_Y2FgAUuO-4pq0koh4_8Nic0pFCM)","owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+        },
+        "premiumWoodBoards": {
+            "assets":{
+                    "ZebraAndBlackWalnut":{
+                    "name":"Zebra And Black Walnut",
+                    "dark": {
+                        "h1":"url(http://arweave.net/VEEHZKjhg77tf-s8ZONXUHXHW7tWG3PaIAUl1cDkZH4)",
+                        "f1":"url(http://arweave.net/2fmBPHgjKsxSP61U2jxfDhO49rq7vNjwItfiI29F9lA)",
+                        "d1":"url(http://arweave.net/1ErooOXxocNOErNjnbc4kt08r8sa0THMBto_lK7eIW8)",
+                        "b1":"url(http://arweave.net/ihiNkUFBDiv0JYFSMGZcUoFWMNFgNnh5RtFRdaQ-JQQ)",
+                        "g2":"url(http://arweave.net/sxQpYUIY3Q6TzVUzeSSoFi2knYNxhSM2w2iKfOftQVA)",
+                        "e2":"url(http://arweave.net/_R3H293st-N_XtlqHNjdVFSuxvLS424dYL1PZArtokk)",
+                        "c2":"url(http://arweave.net/DhybRpNcHKptS_qaz5A5QOt6A4c9aghBtFiYLIkmIuM)",
+                        "a2":"url(http://arweave.net/ekf0Lycn_wzSr_biimyk6DbG3Y0w_i6EVyQAk4H7Kcc)",
+                        "h3":"url(http://arweave.net/_bdDMpujzWwLBJlGMmhwt4bMqFFYkbT8OyU1myLt9SY)",
+                        "f3":"url(http://arweave.net/ZqDmXiHLAwW7eBebreJ72LaTC37aJVgq9pAu5xoGRWQ)",
+                        "d3":"url(http://arweave.net/HdkDwuAqD78mvkr2PjK8SzCAkBLAVISYP7tlafNL9h8)",
+                        "b3":"url(http://arweave.net/J7g1ydXmWInCqHVUqPkl3I8DWMt-67UdjTbL2B3_Qig)",
+                        "g4":"url(http://arweave.net/1nBWR8IjQ2vGrweQnhubbaeWKjrMH_ry5KAH3ea8OGY)",
+                        "e4":"url(http://arweave.net/zhdthm2yQ952893g1tDawT9ibqKSg-6rDGL3IHIeucA)",
+                        "c4":"url(http://arweave.net/xXxFUPDF2zYLFqyMDY8Idi5ku_D-Ux8_daIcivY-q8c)",
+                        "a4":"url(http://arweave.net/LHXG8TYxGZP14hBcb2obCB7ugZbyrDhV8a6sozRZ7Dc)",
+                        "h5":"url(http://arweave.net/_jczon75qKPAjCRw3IxNVCNhAEO7QbQx81zHacJaDQE)",
+                        "f5":"url(http://arweave.net/rG2F8jCB9msuvnKK8DT0bzNTAGtLGQYE-tEcNvauZAg)",
+                        "d5":"url(http://arweave.net/04K8I-bmy94JqesaikQ_XFLR6sFLxzoCyj7Ggmwv2U4)",
+                        "b5":"url(http://arweave.net/XW7JSm1kRk_shaXya0-xdNxTJzNQTHVnL-yQe1aA3lU)",
+                        "g6":"url(http://arweave.net/XDee9WaahxGs2kKa3pj8IYnbQ7LppVCO5BWiJM7QVlQ)",
+                        "e6":"url(http://arweave.net/aWCV8sgvvB9T0pTklcMiqMjfV8xSuJ_uQ82ZOVjYEEQ)",
+                        "c6":"url(http://arweave.net/C6ZHRhEdXlKwLNcskSDUMXn-x1nY1OYTDh9WE0_T7us)",
+                        "a6":"url(http://arweave.net/hFIYCoGi99O6BSR4qScH_3LO9Sdyw0bIPtkw2xsq5Q0)",
+                        "h7":"url(http://arweave.net/nMUCdrWNNZ40e2M0HgmdHnF8BSwW9us4_r_3BZR4eYw-M)",
+                        "f7":"url(http://arweave.net/-744JiUtJoy-83V7RKXfINDfHPTRgxXawX5qHlgANgE)",
+                        "d7":"url(http://arweave.net/PufuPVZA0G1sCpIYKxRitr0Tu2kyS9fcqIHBd9LSBkM)",
+                        "b7":"url(http://arweave.net/d-88fPgsg2P32bbMg5eeeYfhRt9k0bmO7g_13KhCNIw)",
+                        "g8":"url(http://arweave.net/kHYwhzZGX07Hxs6-Z1AD1_VUZHapvLFNLRHIAjKhNDE)",
+                        "e8":"url(http://arweave.net/rSfO1M1rF31uavCxZRSydZ4C_HRt_AU6w490U7G7daE)",
+                        "c8":"url(http://arweave.net/Vy3ldQcbzzugdO_kKn5d3dC98FLWbu-DCzzQ3Syk23c)",
+                        "a8":"url(http://arweave.net/x_1YkfkEUrqaVpBXXXgS1xBefdNqSgcUazcVQIaOMLc)"
+                    }, 
+                    "light": {
+                        "g1":"url(http://arweave.net/EIc05r5iE2zqPw0XwXkyfWreKEUUoz79FbDEsfjWA-8)",
+                        "e1":"url(http://arweave.net/5MEOmX3nDV86hhTbShWI1aoG9Ku0WsArgjNjWOve9Ng)",
+                        "c1":"url(http://arweave.net/vhVfFGE5RQdEpqR5Fs2ofGnIIQo_AIKhJIjFC06vTh0)",
+                        "a1":"url(http://arweave.net/JtvpyIu3YX_tHcaKEAkGY6TZNoLQNkF7RvczuBZyX74)",
+                        "h2":"url(http://arweave.net/CU5gvDyEt_DfuDhHRNtlx9bbpjHiPx7dP_TcmRfOQX4)",
+                        "f2":"url(http://arweave.net/mNUvtAN8yKT6OiBh55WqRsin8tsMSkSvMwWad2X_cXc)",
+                        "d2":"url(http://arweave.net/hC9d8DdTJEwtcY9NsjHXDv7awAKT0MBPZUB05B01snE)",
+                        "b2":"url(http://arweave.net/uHuTTnr0htmjzTpzo1Bl3a_yuAfVgodMC-bhcoA6GSM)",
+                        "g3":"url(http://arweave.net/cyEKuajrfDGfVUH-BamCpJaAnIv22hMg6F5K26dNj2M)",
+                        "e3":"url(http://arweave.net/wFoGjqZliKYMdV68JIlQP0M0m5GM3pGFn8SxDuA8Amg)",
+                        "c3":"url(http://arweave.net/GP-zeO2IbasGjyALLgSBUPrBOq-z1WOAmy72GIp1dHU)",
+                        "a3":"url(http://arweave.net/S1N75NYXmUJ1uUJcbRjBzV3cO5lYG3bNvj0-3rOxzf0)",
+                        "h4":"url(http://arweave.net/YOd8KZDYt6n6SPZbFk8jh7pvoqDYUHhqn-0Ks7npHSU)",
+                        "f4":"url(http://arweave.net/M6TQ4Zz7wz-uZSv82IE8UmXCRS9X8JHGehzOwJcSNA0)",
+                        "d4":"url(http://arweave.net/WUZCjZ6Z5k7YXikRmru5M1_PgXOQV_-zWGCIvzHhajM)",
+                        "b4":"url(http://arweave.net/ISeXqsHYoPZDH1pD-XpLxJUY3uoWzdhohDoYbooZm5o)",
+                        "g5":"url(http://arweave.net/Ia7-TD_gvGxkEGgzsvXMbpgOhXV_ZwhCsFx4rYrN6Mc)",
+                        "e5":"url(http://arweave.net/0bJ0pHH4n6kQKliGx5OCouEOkmVuRXlyLSwDDoDrwYc)",
+                        "c5":"url(http://arweave.net/wDMwo0hk0HjcwdvHpQj_eO0UkUy9Ytqf4T1aH0VQgD0)",
+                        "a5":"url(http://arweave.net/pG5T7ZVKr_Njc7apYIOlZ3kgyLio6CDoZlY596nKOYk)",
+                        "h6":"url(http://arweave.net/-42eU-hb-C4zF7XfWDfnrSiXYxhPCSAFsDB2X3eBe_k)",
+                        "f6":"url(http://arweave.net/qFQrztIR8pxXBxtR9_qM_6S9qatLbMt6h37aB0GR0XY)",
+                        "d6":"url(http://arweave.net/7Et688GJ8vyFQ9gCBTPznENMIvzHQYj3y-1_Yb07x9g)",
+                        "b6":"url(http://arweave.net/1TGmZI12Uj7kounoiNQ-jMQ1mdUJoXvTXZ2UC2VLcjE)",
+                        "g7":"url(http://arweave.net/mzNd3vFQa_3lxSKAO451b2sfXgC-FMUND2ZVxD3l33M)",
+                        "e7":"url(http://arweave.net/JrBhR45Qnydn6k9GnMDntOdJxtycLZZfaDwiY5Fjw1s)",
+                        "c7":"url(http://arweave.net/XCB83_vgwNAT-3vjTTP79p_UWldnZveOLZ4kcWXzc5U)",
+                        "a7":"url(http://arweave.net/rXNYK_iBtksd7w76cvZ0HR63H5GTY63oHLOtT8c6wPQ)",
+                        "h8":"url(http://arweave.net/798RPGIRTD7tSfPlfGaLLetX6A3FbsAvJ2OkAQjqmrg)",
+                        "f8":"url(http://arweave.net/-0bffdgZ87XCMmePw5Jmrjc9Wg_SXvosqOEVbbpxm3o)",
+                        "d8":"url(http://arweave.net/grpzGKEIGtVaBCKbFc_9E7X0j6o1rKMsTQI4lp6LFLY)",
+                        "b8":"url(http://arweave.net/ZURk25QBd4s4u-je5fZZn-SY53wW6JIF0j9nteqrVi4)"
+                    },
+                    "owners":["88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM"], 
+                    "burnable": false}},
+            "owners": "88-FbW6-fGYKLFyfO5qKZ5xsg5HhUrr2gIt4aIuT_iM",
+            "burnable": true
+        }}
+        
+        
+  
+
+}
+}

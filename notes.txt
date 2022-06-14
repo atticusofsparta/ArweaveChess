@@ -1,0 +1,49 @@
+What is Arweave Chess?
+    This is a multiplayer chess game using socket IO and atomic nfts on arweave. 
+    Players are required to mint a membership nft and can then mint chess sets.
+    Wallet is Arconnect.
+
+Website is hosted via Ens + arweave  with the server hosted via heroku.    
+
+todo: 
+	upload all the images to arweave and add the urls to the smart contract
+	add a holdings page to view the users nfts held by contract
+	add a landing page to prompt connect and mint membership token.
+	add functions to mint nfts from preset assets in contract
+	add custom collections and asset uploading in the market.
+	add getting collections and assets from the nft contract in the market instead of loading from state.
+	
+
+
+
+
+
+Joats-WXPFGowXRQR9sUN5E-lPdd0MGZFUYKXQu5yeI  2.24 MB        0.000629371598   image/jpeg                    PersianChessBoard.jp
+n76tC7IZevYDcS9ZdwH5f320d7mkTN6qT28f7kZGw4Q  7.65 kB        0.000070690305   image/png                     WhiteSand.png       
+scokzGpVUoZDuGnzdOTCMW_3jHlY5vdrLBvmJ3Q1sHQ  4.49 kB        0.000070690305   image/png                     BlackSand.png    
+   RGze_Vv0R1N4J53B2PO-8yAbSzoGJnvTCVAbIAZxkgk  702.68 kB      0.000210360628   image/jpeg                    ChessAndGoose.jpg   
+   MiLrQVNr6zi-kjrKt95wAc_Rn5ahcrH6UHwd77DS4BY  56.63 kB       0.000070690305   image/jpeg                    BlackSand.jpg       
+
+    
+    
+
+
+
+
+
+
+
+eY-hmVG1EB07IIE1jlyJmm--pNd1YE5Pb2UCj6oIeoo  16.43 kB       0.000070690305   image/webp                    avatar.webp         
+DSSX9T8TtEv_T1hhKUgHTSbJgEZHOHCPeXSc70jfmI4  12.26 kB       0.000070690305   image/webp                    avatarhooded.webp   
+Pycn0zA_kwXeSdHP_uz9YF_ipA6D94GVt3-A8e0FgnI  66.37 kB       0.000070690305   image/webp                    pathfinder_cryohydra
+ZOJdt-2dSDmCBtq4i0kbMoBhZdlFwe-54EwZyQV3rk0  754.85 kB      0.000210360628   image/png                     hooded-figure.png   
+3EMWfQR1-zc7olA9kKGEc9nhkLMCFbhxSvFIblWVFYA  54.82 kB       0.000070690305   image/png                     Mysterious Figure01.
+O4y6XUByelbTLEbAwlGzcgsF5Fy9wh5RYEjgIX5RNOc  460.00 Bytes   0.000070690305   application/x.arweave-manifest 
+ 
+
+
+                      
+
+
+
+AGCwtqwL4zaTnpDwXVVJoWtM05FBaEfaMkwmOD2Uevg  826.00 Bytes   0.000069416606   application/x.arweave-manifest     
